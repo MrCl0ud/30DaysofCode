@@ -1,8 +1,16 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Person person = new Person(5);
-        person.amIOld();
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        for (int i = 1; i < 11; i++) {
+            System.out.println(n + " x " + i + " = " + (i*n));
+        }
+
+        bufferedReader.close();
     }
+}
 }
